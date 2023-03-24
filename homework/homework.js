@@ -1,6 +1,17 @@
 // Obtener la referencia de todos los divs en una constante llamada "divs".
 //Escriba aquí su código:
-
+  const divs = document.querySelectorAll("div");
+  for(let i = 0, i < divs.length; i++) {
+    const box = divs[i];
+    box.innerText = "box " + box.innerText;
+    if (i == 0){
+      box.style.backgroundColor = "red";
+    }else if (i == 1){
+      box.style.backgroundColor = "green";
+    }else {
+      box.style.backgroundColor = "blue";
+    }
+  }
 
 /*
 Al obtener la referencia de los divs, usted podrá iterar estos mismos contenedores con métodos de javascript, cómo while o for.
